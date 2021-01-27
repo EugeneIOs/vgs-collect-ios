@@ -81,6 +81,7 @@
 		4404600F256801890064BEA0 /* APIHostnameValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404600D2568017E0064BEA0 /* APIHostnameValidatorTests.swift */; };
 		4413C40125C150050032E001 /* VGSCollectAssetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4413C40025C150050032E001 /* VGSCollectAssetsBundle.swift */; };
 		4413C40225C150050032E001 /* VGSCollectAssetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4413C40025C150050032E001 /* VGSCollectAssetsBundle.swift */; };
+		4413C41125C150C10032E001 /* dummy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4413C41025C150C10032E001 /* dummy.h */; };
 		44151C7825C1481200AF0A13 /* VGSCollectSDK_Light.h in Headers */ = {isa = PBXBuildFile; fileRef = 44151C7625C1481200AF0A13 /* VGSCollectSDK_Light.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44151C8625C14A5500AF0A13 /* dummy.h in Headers */ = {isa = PBXBuildFile; fileRef = 44151C8525C14A5500AF0A13 /* dummy.h */; };
 		44151C9625C14A8100AF0A13 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44151C9525C14A8100AF0A13 /* dummy.swift */; };
@@ -207,6 +208,7 @@
 		4404600B2567FA0B0064BEA0 /* APIHostnameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHostnameValidator.swift; sourceTree = "<group>"; };
 		4404600D2568017E0064BEA0 /* APIHostnameValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHostnameValidatorTests.swift; sourceTree = "<group>"; };
 		4413C40025C150050032E001 /* VGSCollectAssetsBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGSCollectAssetsBundle.swift; sourceTree = "<group>"; };
+		4413C41025C150C10032E001 /* dummy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dummy.h; sourceTree = "<group>"; };
 		44151C7425C1481200AF0A13 /* VGSCollectSDK_Light.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VGSCollectSDK_Light.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44151C7625C1481200AF0A13 /* VGSCollectSDK_Light.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VGSCollectSDK_Light.h; sourceTree = "<group>"; };
 		44151C7725C1481200AF0A13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -518,6 +520,7 @@
 			children = (
 				4413C40025C150050032E001 /* VGSCollectAssetsBundle.swift */,
 				4476778A25C14460001C3CB2 /* Resources */,
+				4413C41025C150C10032E001 /* dummy.h */,
 			);
 			path = VGSCollectResources;
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4476777F25C143FB001C3CB2 /* VGSCollectResources.h in Headers */,
+				4413C41125C150C10032E001 /* dummy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
