@@ -79,6 +79,7 @@
 		32F4B7F424C881FA006086F3 /* Calendar+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F4B7F324C881FA006086F3 /* Calendar+extension.swift */; };
 		4404600C2567FA0B0064BEA0 /* APIHostnameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404600B2567FA0B0064BEA0 /* APIHostnameValidator.swift */; };
 		4404600F256801890064BEA0 /* APIHostnameValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404600D2568017E0064BEA0 /* APIHostnameValidatorTests.swift */; };
+		44151C7825C1481200AF0A13 /* VGSCollectSDK_Light.h in Headers */ = {isa = PBXBuildFile; fileRef = 44151C7625C1481200AF0A13 /* VGSCollectSDK_Light.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4476777F25C143FB001C3CB2 /* VGSCollectResources.h in Headers */ = {isa = PBXBuildFile; fileRef = 4476777D25C143FB001C3CB2 /* VGSCollectResources.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4476778C25C14460001C3CB2 /* CardIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4476778B25C14460001C3CB2 /* CardIcon.xcassets */; };
 		FD05F9472316CE5A000EAF52 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05F9392316CE5A000EAF52 /* Storage.swift */; };
@@ -201,6 +202,9 @@
 		32F4B7F324C881FA006086F3 /* Calendar+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+extension.swift"; sourceTree = "<group>"; };
 		4404600B2567FA0B0064BEA0 /* APIHostnameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHostnameValidator.swift; sourceTree = "<group>"; };
 		4404600D2568017E0064BEA0 /* APIHostnameValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHostnameValidatorTests.swift; sourceTree = "<group>"; };
+		44151C7425C1481200AF0A13 /* VGSCollectSDK_Light.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VGSCollectSDK_Light.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44151C7625C1481200AF0A13 /* VGSCollectSDK_Light.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VGSCollectSDK_Light.h; sourceTree = "<group>"; };
+		44151C7725C1481200AF0A13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4476777B25C143FB001C3CB2 /* VGSCollectResources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VGSCollectResources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4476777D25C143FB001C3CB2 /* VGSCollectResources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VGSCollectResources.h; sourceTree = "<group>"; };
 		4476777E25C143FB001C3CB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -268,6 +272,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				32CFC71024EBEEB300457B17 /* VGSCardScanCollector.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44151C7125C1481200AF0A13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +479,22 @@
 			path = PaymentCards;
 			sourceTree = "<group>";
 		};
+		44151C7525C1481200AF0A13 /* VGSCollectSDK-Light */ = {
+			isa = PBXGroup;
+			children = (
+				44151C7625C1481200AF0A13 /* VGSCollectSDK_Light.h */,
+				44151C7725C1481200AF0A13 /* Info.plist */,
+			);
+			path = "VGSCollectSDK-Light";
+			sourceTree = "<group>";
+		};
+		44151C8325C1482100AF0A13 /* VGSCollectSDK-Light */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "VGSCollectSDK-Light";
+			sourceTree = "<group>";
+		};
 		4476777C25C143FB001C3CB2 /* VGSCollectResources */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,6 +571,7 @@
 				32CFC71324EBEEB300457B17 /* VGSCardScanCollectorTests */,
 				326FFAF324F904430024A4F9 /* VGSCardIOCollector */,
 				4476777C25C143FB001C3CB2 /* VGSCollectResources */,
+				44151C7525C1481200AF0A13 /* VGSCollectSDK-Light */,
 				FD12B9B02304619100B670DD /* Products */,
 				32CFC72324EBF3B500457B17 /* Frameworks */,
 			);
@@ -558,6 +586,7 @@
 				32CFC70F24EBEEB300457B17 /* VGSCardScanCollectorTests.xctest */,
 				326FFAF224F904430024A4F9 /* VGSCardIOCollector.framework */,
 				4476777B25C143FB001C3CB2 /* VGSCollectResources.framework */,
+				44151C7425C1481200AF0A13 /* VGSCollectSDK_Light.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -635,6 +664,7 @@
 		FD8A9722233CF63D0079FA32 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				44151C8325C1482100AF0A13 /* VGSCollectSDK-Light */,
 				FD05F9372316CE5A000EAF52 /* VGSCollectSDK */,
 				326FFAFA24F908AB0024A4F9 /* VGSCardIOCollector */,
 				32CFC71E24EBEF0E00457B17 /* VGSCardScanCollector */,
@@ -718,6 +748,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44151C6F25C1481200AF0A13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44151C7825C1481200AF0A13 /* VGSCollectSDK_Light.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4476777625C143FB001C3CB2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -793,6 +831,24 @@
 			productName = VGSCardScanCollectorTests;
 			productReference = 32CFC70F24EBEEB300457B17 /* VGSCardScanCollectorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		44151C7325C1481200AF0A13 /* VGSCollectSDK-Light */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44151C7B25C1481200AF0A13 /* Build configuration list for PBXNativeTarget "VGSCollectSDK-Light" */;
+			buildPhases = (
+				44151C6F25C1481200AF0A13 /* Headers */,
+				44151C7025C1481200AF0A13 /* Sources */,
+				44151C7125C1481200AF0A13 /* Frameworks */,
+				44151C7225C1481200AF0A13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VGSCollectSDK-Light";
+			productName = "VGSCollectSDK-Light";
+			productReference = 44151C7425C1481200AF0A13 /* VGSCollectSDK_Light.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		4476777A25C143FB001C3CB2 /* VGSCollectResources */ = {
 			isa = PBXNativeTarget;
@@ -870,6 +926,9 @@
 					32CFC70E24EBEEB300457B17 = {
 						CreatedOnToolsVersion = 11.6;
 					};
+					44151C7325C1481200AF0A13 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					4476777A25C143FB001C3CB2 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -902,6 +961,7 @@
 				32CFC70E24EBEEB300457B17 /* VGSCardScanCollectorTests */,
 				326FFAF124F904430024A4F9 /* VGSCardIOCollector */,
 				4476777A25C143FB001C3CB2 /* VGSCollectResources */,
+				44151C7325C1481200AF0A13 /* VGSCollectSDK-Light */,
 			);
 		};
 /* End PBXProject section */
@@ -922,6 +982,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		32CFC70D24EBEEB300457B17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44151C7225C1481200AF0A13 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1058,6 +1125,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				32CFC71524EBEEB300457B17 /* VGSCardScanCollectorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44151C7025C1481200AF0A13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1344,6 +1418,58 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vgs.io.VGSCardScanCollectorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		44151C7925C1481200AF0A13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4445Y664U5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "VGSCollectSDK-Light/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "VGS.VGSCollectSDK-Light";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44151C7A25C1481200AF0A13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4445Y664U5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "VGSCollectSDK-Light/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "VGS.VGSCollectSDK-Light";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1664,6 +1790,15 @@
 			buildConfigurations = (
 				32CFC71A24EBEEB300457B17 /* Debug */,
 				32CFC71B24EBEEB300457B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44151C7B25C1481200AF0A13 /* Build configuration list for PBXNativeTarget "VGSCollectSDK-Light" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44151C7925C1481200AF0A13 /* Debug */,
+				44151C7A25C1481200AF0A13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
