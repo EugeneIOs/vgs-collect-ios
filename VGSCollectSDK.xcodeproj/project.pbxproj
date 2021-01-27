@@ -79,6 +79,8 @@
 		32F4B7F424C881FA006086F3 /* Calendar+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F4B7F324C881FA006086F3 /* Calendar+extension.swift */; };
 		4404600C2567FA0B0064BEA0 /* APIHostnameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404600B2567FA0B0064BEA0 /* APIHostnameValidator.swift */; };
 		4404600F256801890064BEA0 /* APIHostnameValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404600D2568017E0064BEA0 /* APIHostnameValidatorTests.swift */; };
+		4413C40125C150050032E001 /* VGSCollectAssetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4413C40025C150050032E001 /* VGSCollectAssetsBundle.swift */; };
+		4413C40225C150050032E001 /* VGSCollectAssetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4413C40025C150050032E001 /* VGSCollectAssetsBundle.swift */; };
 		44151C7825C1481200AF0A13 /* VGSCollectSDK_Light.h in Headers */ = {isa = PBXBuildFile; fileRef = 44151C7625C1481200AF0A13 /* VGSCollectSDK_Light.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44151C8625C14A5500AF0A13 /* dummy.h in Headers */ = {isa = PBXBuildFile; fileRef = 44151C8525C14A5500AF0A13 /* dummy.h */; };
 		44151C9625C14A8100AF0A13 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44151C9525C14A8100AF0A13 /* dummy.swift */; };
@@ -204,6 +206,7 @@
 		32F4B7F324C881FA006086F3 /* Calendar+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+extension.swift"; sourceTree = "<group>"; };
 		4404600B2567FA0B0064BEA0 /* APIHostnameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHostnameValidator.swift; sourceTree = "<group>"; };
 		4404600D2568017E0064BEA0 /* APIHostnameValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHostnameValidatorTests.swift; sourceTree = "<group>"; };
+		4413C40025C150050032E001 /* VGSCollectAssetsBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGSCollectAssetsBundle.swift; sourceTree = "<group>"; };
 		44151C7425C1481200AF0A13 /* VGSCollectSDK_Light.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VGSCollectSDK_Light.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44151C7625C1481200AF0A13 /* VGSCollectSDK_Light.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VGSCollectSDK_Light.h; sourceTree = "<group>"; };
 		44151C7725C1481200AF0A13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -513,6 +516,7 @@
 		4476778925C14460001C3CB2 /* VGSCollectResources */ = {
 			isa = PBXGroup;
 			children = (
+				4413C40025C150050032E001 /* VGSCollectAssetsBundle.swift */,
 				4476778A25C14460001C3CB2 /* Resources */,
 			);
 			path = VGSCollectResources;
@@ -939,6 +943,7 @@
 					};
 					4476777A25C143FB001C3CB2 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					FD12B9AE2304619100B670DD = {
 						CreatedOnToolsVersion = 10.3;
@@ -1148,6 +1153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4413C40225C150050032E001 /* VGSCollectAssetsBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1205,6 +1211,7 @@
 				3262B30123F6CBCB00D4A73D /* VGSFilePickerController.swift in Sources */,
 				324B5E7324A23F6B0036867E /* VGSValidationRuleLuhnCheck.swift in Sources */,
 				FD148A07232EC53600FD7781 /* State.swift in Sources */,
+				4413C40125C150050032E001 /* VGSCollectAssetsBundle.swift in Sources */,
 				322F94BB25BABE97001CDF12 /* ExpDateFormatConvertor.swift in Sources */,
 				324B5E6D24A23CC50036867E /* VGSValidationError.swift in Sources */,
 				321300192417F2E80062FEF0 /* VGSCollect+internal.swift in Sources */,
@@ -1490,6 +1497,7 @@
 		4476778025C143FB001C3CB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1508,6 +1516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = VGS.VGSCollectResources;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1516,6 +1525,7 @@
 		4476778125C143FB001C3CB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

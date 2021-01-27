@@ -18,8 +18,8 @@ extension VGSPaymentCards.CardBrand {
     }
   
     var defaultBrandIcon: UIImage? {
-        let bundle = AssetsBundle.main.iconBundle
-        
+			  let bundle = AssetsBundle.main.iconBundle
+
         var resultIcon: UIImage?
         switch self {
         case .visa:
@@ -65,23 +65,24 @@ internal class AssetsBundle {
     
     init() {
 			// Identify bundle for SPM.
-			#if SWIFT_PACKAGE
-				iconBundle = Bundle.module
+
+			#if canImport(VGSCollectResources)
+				iconBundle = VGSCollectAssetsBundle.main.iconBundle
 			#endif
 
-			// Return if bundle is found.
-			guard iconBundle == nil else {
-				return
-			}
-
-			let containingBundle = Bundle(for: AssetsBundle.self)
-
-			// Look for CardIcon bundle (handle CocoaPods integration).
-			if let bundleURL = containingBundle.url(forResource: "CardIcon", withExtension: "bundle") {
-				iconBundle = Bundle(url: bundleURL)
-			} else {
-				// Icon bundle matches containing bundle (Carthage integration).
-				iconBundle = containingBundle
-			}
+//			// Return if bundle is found.
+//			guard iconBundle == nil else {
+//				return
+//			}
+//
+//			let containingBundle = Bundle(for: AssetsBundle.self)
+//
+//			// Look for CardIcon bundle (handle CocoaPods integration).
+//			if let bundleURL = containingBundle.url(forResource: "CardIcon", withExtension: "bundle") {
+//				iconBundle = Bundle(url: bundleURL)
+//			} else {
+//				// Icon bundle matches containing bundle (Carthage integration).
+//				iconBundle = containingBundle
+//			}
     }
 }
