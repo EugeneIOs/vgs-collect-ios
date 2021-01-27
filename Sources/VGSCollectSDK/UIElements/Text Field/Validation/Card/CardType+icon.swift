@@ -11,12 +11,8 @@ import Foundation
 import UIKit
 #endif
 
-
-internal var isVGSResourcesAvailable = false
-
 #if canImport(VGSCollectResources)
 import VGSCollectResources
-isVGSResourcesAvailable  = true
 #endif
 
 extension VGSPaymentCards.CardBrand {
@@ -74,9 +70,11 @@ internal class AssetsBundle {
     init() {
 			// Identify bundle for SPM.
 
-			if isVGSResourcesAvailable {
+			#if canImport(VGSCollectResources)
 				iconBundle = VGSCollectAssetsBundle.main.iconBundle
-			}
+			#endif
+
+
 
 //			// Return if bundle is found.
 //			guard iconBundle == nil else {
