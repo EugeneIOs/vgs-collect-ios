@@ -83,10 +83,10 @@
 		4413C40225C150050032E001 /* VGSCollectAssetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4413C40025C150050032E001 /* VGSCollectAssetsBundle.swift */; };
 		4413C41125C150C10032E001 /* dummy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4413C41025C150C10032E001 /* dummy.h */; };
 		44151C7825C1481200AF0A13 /* VGSCollectSDK_Light.h in Headers */ = {isa = PBXBuildFile; fileRef = 44151C7625C1481200AF0A13 /* VGSCollectSDK_Light.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		44151C8625C14A5500AF0A13 /* dummy.h in Headers */ = {isa = PBXBuildFile; fileRef = 44151C8525C14A5500AF0A13 /* dummy.h */; };
-		44151C9625C14A8100AF0A13 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44151C9525C14A8100AF0A13 /* dummy.swift */; };
 		4476777F25C143FB001C3CB2 /* VGSCollectResources.h in Headers */ = {isa = PBXBuildFile; fileRef = 4476777D25C143FB001C3CB2 /* VGSCollectResources.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4476778C25C14460001C3CB2 /* CardIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4476778B25C14460001C3CB2 /* CardIcon.xcassets */; };
+		44BAD6C025C17A360060A170 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BAD6BE25C17A360060A170 /* dummy.swift */; };
+		44BAD6C125C17A360060A170 /* dummy.h in Headers */ = {isa = PBXBuildFile; fileRef = 44BAD6BF25C17A360060A170 /* dummy.h */; };
 		FD05F9472316CE5A000EAF52 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05F9392316CE5A000EAF52 /* Storage.swift */; };
 		FD05F94A2316CE5A000EAF52 /* VGSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05F93C2316CE5A000EAF52 /* VGSConfiguration.swift */; };
 		FD05F94C2316CE5A000EAF52 /* VGSCollectSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = FD05F93F2316CE5A000EAF52 /* VGSCollectSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -212,12 +212,12 @@
 		44151C7425C1481200AF0A13 /* VGSCollectSDK_Light.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VGSCollectSDK_Light.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44151C7625C1481200AF0A13 /* VGSCollectSDK_Light.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VGSCollectSDK_Light.h; sourceTree = "<group>"; };
 		44151C7725C1481200AF0A13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		44151C8525C14A5500AF0A13 /* dummy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dummy.h; sourceTree = "<group>"; };
-		44151C9525C14A8100AF0A13 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		4476777B25C143FB001C3CB2 /* VGSCollectResources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VGSCollectResources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4476777D25C143FB001C3CB2 /* VGSCollectResources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VGSCollectResources.h; sourceTree = "<group>"; };
 		4476777E25C143FB001C3CB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4476778B25C14460001C3CB2 /* CardIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CardIcon.xcassets; sourceTree = "<group>"; };
+		44BAD6BE25C17A360060A170 /* dummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
+		44BAD6BF25C17A360060A170 /* dummy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dummy.h; sourceTree = "<group>"; };
 		FD05F9392316CE5A000EAF52 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		FD05F93A2316CE5A000EAF52 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		FD05F93B2316CE5A000EAF52 /* VGSCollect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGSCollect.swift; sourceTree = "<group>"; };
@@ -497,15 +497,6 @@
 			path = "VGSCollectSDK-Light";
 			sourceTree = "<group>";
 		};
-		44151C8425C14A0800AF0A13 /* VGSCollectSDK-Light */ = {
-			isa = PBXGroup;
-			children = (
-				44151C8525C14A5500AF0A13 /* dummy.h */,
-				44151C9525C14A8100AF0A13 /* dummy.swift */,
-			);
-			path = "VGSCollectSDK-Light";
-			sourceTree = "<group>";
-		};
 		4476777C25C143FB001C3CB2 /* VGSCollectResources */ = {
 			isa = PBXGroup;
 			children = (
@@ -531,6 +522,15 @@
 				4476778B25C14460001C3CB2 /* CardIcon.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		44BAD6BD25C17A360060A170 /* VGSCollectSDK-Light */ = {
+			isa = PBXGroup;
+			children = (
+				44BAD6BE25C17A360060A170 /* dummy.swift */,
+				44BAD6BF25C17A360060A170 /* dummy.h */,
+			);
+			path = "VGSCollectSDK-Light";
 			sourceTree = "<group>";
 		};
 		FD05F9372316CE5A000EAF52 /* VGSCollectSDK */ = {
@@ -677,7 +677,7 @@
 		FD8A9722233CF63D0079FA32 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				44151C8425C14A0800AF0A13 /* VGSCollectSDK-Light */,
+				44BAD6BD25C17A360060A170 /* VGSCollectSDK-Light */,
 				FD05F9372316CE5A000EAF52 /* VGSCollectSDK */,
 				326FFAFA24F908AB0024A4F9 /* VGSCardIOCollector */,
 				32CFC71E24EBEF0E00457B17 /* VGSCardScanCollector */,
@@ -766,7 +766,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44151C7825C1481200AF0A13 /* VGSCollectSDK_Light.h in Headers */,
-				44151C8625C14A5500AF0A13 /* dummy.h in Headers */,
+				44BAD6C125C17A360060A170 /* dummy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1149,7 +1149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44151C9625C14A8100AF0A13 /* dummy.swift in Sources */,
+				44BAD6C025C17A360060A170 /* dummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
