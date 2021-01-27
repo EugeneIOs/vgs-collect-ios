@@ -36,7 +36,7 @@ let package = Package(
 							"VGSCollectSDK.h",
 	 				]),
 			.target(
-					name: "VGSCollectSDK-Light",
+				name: "VGSCollectSDK-Light",
 				dependencies: [
 					.target(name: "VGSCollectSDK")
 				]),

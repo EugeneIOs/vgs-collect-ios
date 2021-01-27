@@ -80,6 +80,8 @@
 		4404600C2567FA0B0064BEA0 /* APIHostnameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404600B2567FA0B0064BEA0 /* APIHostnameValidator.swift */; };
 		4404600F256801890064BEA0 /* APIHostnameValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404600D2568017E0064BEA0 /* APIHostnameValidatorTests.swift */; };
 		44151C7825C1481200AF0A13 /* VGSCollectSDK_Light.h in Headers */ = {isa = PBXBuildFile; fileRef = 44151C7625C1481200AF0A13 /* VGSCollectSDK_Light.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44151C8625C14A5500AF0A13 /* dummy.h in Headers */ = {isa = PBXBuildFile; fileRef = 44151C8525C14A5500AF0A13 /* dummy.h */; };
+		44151C9625C14A8100AF0A13 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44151C9525C14A8100AF0A13 /* dummy.swift */; };
 		4476777F25C143FB001C3CB2 /* VGSCollectResources.h in Headers */ = {isa = PBXBuildFile; fileRef = 4476777D25C143FB001C3CB2 /* VGSCollectResources.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4476778C25C14460001C3CB2 /* CardIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4476778B25C14460001C3CB2 /* CardIcon.xcassets */; };
 		FD05F9472316CE5A000EAF52 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05F9392316CE5A000EAF52 /* Storage.swift */; };
@@ -205,6 +207,8 @@
 		44151C7425C1481200AF0A13 /* VGSCollectSDK_Light.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VGSCollectSDK_Light.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44151C7625C1481200AF0A13 /* VGSCollectSDK_Light.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VGSCollectSDK_Light.h; sourceTree = "<group>"; };
 		44151C7725C1481200AF0A13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44151C8525C14A5500AF0A13 /* dummy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dummy.h; sourceTree = "<group>"; };
+		44151C9525C14A8100AF0A13 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		4476777B25C143FB001C3CB2 /* VGSCollectResources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VGSCollectResources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4476777D25C143FB001C3CB2 /* VGSCollectResources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VGSCollectResources.h; sourceTree = "<group>"; };
 		4476777E25C143FB001C3CB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -488,9 +492,11 @@
 			path = "VGSCollectSDK-Light";
 			sourceTree = "<group>";
 		};
-		44151C8325C1482100AF0A13 /* VGSCollectSDK-Light */ = {
+		44151C8425C14A0800AF0A13 /* VGSCollectSDK-Light */ = {
 			isa = PBXGroup;
 			children = (
+				44151C8525C14A5500AF0A13 /* dummy.h */,
+				44151C9525C14A8100AF0A13 /* dummy.swift */,
 			);
 			path = "VGSCollectSDK-Light";
 			sourceTree = "<group>";
@@ -664,7 +670,7 @@
 		FD8A9722233CF63D0079FA32 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				44151C8325C1482100AF0A13 /* VGSCollectSDK-Light */,
+				44151C8425C14A0800AF0A13 /* VGSCollectSDK-Light */,
 				FD05F9372316CE5A000EAF52 /* VGSCollectSDK */,
 				326FFAFA24F908AB0024A4F9 /* VGSCardIOCollector */,
 				32CFC71E24EBEF0E00457B17 /* VGSCardScanCollector */,
@@ -753,6 +759,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44151C7825C1481200AF0A13 /* VGSCollectSDK_Light.h in Headers */,
+				44151C8625C14A5500AF0A13 /* dummy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -928,6 +935,7 @@
 					};
 					44151C7325C1481200AF0A13 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					4476777A25C143FB001C3CB2 = {
 						CreatedOnToolsVersion = 12.2;
@@ -1132,6 +1140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44151C9625C14A8100AF0A13 /* dummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1426,6 +1435,7 @@
 		44151C7925C1481200AF0A13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1444,6 +1454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "VGS.VGSCollectSDK-Light";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1452,6 +1463,7 @@
 		44151C7A25C1481200AF0A13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
