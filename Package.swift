@@ -14,6 +14,9 @@ let package = Package(
             name: "VGSCollectSDK",
             targets: ["VGSCollectSDK"]),
 			  .library(
+					name: "VGSCollectResources",
+					targets: ["VGSCollectResources"]),
+			  .library(
 					name: "VGSCollectSDK-Light",
 					targets: ["VGSCollectSDK-Light"]),
     ],
@@ -26,19 +29,18 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "VGSCollectSDK",
+					  dependencies: ["VGSCollectSDK", "VGSCollectResources"],
   					exclude: [
 							"VGSCollectSDK.h",
 	 				]),
 			.target(
 					name: "VGSCollectSDK-Light",
-				  path: "Sources/VGSCollectSDK",
-					exclude: [
-						"VGSCollectSDK.h",
-						"Resources"
-				]),
-        .testTarget(
+				  dependencies: ["VGSCollectSDK"]),
+			.target(
+					name: "VGSCollectResources"),
+			.testTarget(
             name: "FrameworkTests",
-            dependencies: ["VGSCollectSDK"]
+            dependencies: ["VGSCollectSDK", "VGSCollectResources"]
 				)
 			]
 )

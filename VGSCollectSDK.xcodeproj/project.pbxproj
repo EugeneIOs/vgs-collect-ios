@@ -79,7 +79,8 @@
 		32F4B7F424C881FA006086F3 /* Calendar+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F4B7F324C881FA006086F3 /* Calendar+extension.swift */; };
 		4404600C2567FA0B0064BEA0 /* APIHostnameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404600B2567FA0B0064BEA0 /* APIHostnameValidator.swift */; };
 		4404600F256801890064BEA0 /* APIHostnameValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404600D2568017E0064BEA0 /* APIHostnameValidatorTests.swift */; };
-		447A81122589438000BC77C7 /* CardIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 447A81112589438000BC77C7 /* CardIcon.xcassets */; };
+		4476777F25C143FB001C3CB2 /* VGSCollectResources.h in Headers */ = {isa = PBXBuildFile; fileRef = 4476777D25C143FB001C3CB2 /* VGSCollectResources.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4476778C25C14460001C3CB2 /* CardIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4476778B25C14460001C3CB2 /* CardIcon.xcassets */; };
 		FD05F9472316CE5A000EAF52 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05F9392316CE5A000EAF52 /* Storage.swift */; };
 		FD05F94A2316CE5A000EAF52 /* VGSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05F93C2316CE5A000EAF52 /* VGSConfiguration.swift */; };
 		FD05F94C2316CE5A000EAF52 /* VGSCollectSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = FD05F93F2316CE5A000EAF52 /* VGSCollectSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -200,7 +201,10 @@
 		32F4B7F324C881FA006086F3 /* Calendar+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+extension.swift"; sourceTree = "<group>"; };
 		4404600B2567FA0B0064BEA0 /* APIHostnameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHostnameValidator.swift; sourceTree = "<group>"; };
 		4404600D2568017E0064BEA0 /* APIHostnameValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHostnameValidatorTests.swift; sourceTree = "<group>"; };
-		447A81112589438000BC77C7 /* CardIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CardIcon.xcassets; sourceTree = "<group>"; };
+		4476777B25C143FB001C3CB2 /* VGSCollectResources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VGSCollectResources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4476777D25C143FB001C3CB2 /* VGSCollectResources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VGSCollectResources.h; sourceTree = "<group>"; };
+		4476777E25C143FB001C3CB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4476778B25C14460001C3CB2 /* CardIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CardIcon.xcassets; sourceTree = "<group>"; };
 		FD05F9392316CE5A000EAF52 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		FD05F93A2316CE5A000EAF52 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		FD05F93B2316CE5A000EAF52 /* VGSCollect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGSCollect.swift; sourceTree = "<group>"; };
@@ -264,6 +268,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				32CFC71024EBEEB300457B17 /* VGSCardScanCollector.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4476777825C143FB001C3CB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,10 +468,27 @@
 			path = PaymentCards;
 			sourceTree = "<group>";
 		};
-		447A81102589438000BC77C7 /* Resources */ = {
+		4476777C25C143FB001C3CB2 /* VGSCollectResources */ = {
 			isa = PBXGroup;
 			children = (
-				447A81112589438000BC77C7 /* CardIcon.xcassets */,
+				4476777D25C143FB001C3CB2 /* VGSCollectResources.h */,
+				4476777E25C143FB001C3CB2 /* Info.plist */,
+			);
+			path = VGSCollectResources;
+			sourceTree = "<group>";
+		};
+		4476778925C14460001C3CB2 /* VGSCollectResources */ = {
+			isa = PBXGroup;
+			children = (
+				4476778A25C14460001C3CB2 /* Resources */,
+			);
+			path = VGSCollectResources;
+			sourceTree = "<group>";
+		};
+		4476778A25C14460001C3CB2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4476778B25C14460001C3CB2 /* CardIcon.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -470,7 +498,6 @@
 			children = (
 				FD05F9382316CE5A000EAF52 /* Core */,
 				FD05F9432316CE5A000EAF52 /* UIElements */,
-				447A81102589438000BC77C7 /* Resources */,
 				326FFB0124F90B270024A4F9 /* Integrations */,
 				32C894D5256D4AA500DC5648 /* Utils */,
 				FD05F93F2316CE5A000EAF52 /* VGSCollectSDK.h */,
@@ -516,6 +543,7 @@
 				32CFC70824EBEEB300457B17 /* VGSCardScanCollector */,
 				32CFC71324EBEEB300457B17 /* VGSCardScanCollectorTests */,
 				326FFAF324F904430024A4F9 /* VGSCardIOCollector */,
+				4476777C25C143FB001C3CB2 /* VGSCollectResources */,
 				FD12B9B02304619100B670DD /* Products */,
 				32CFC72324EBF3B500457B17 /* Frameworks */,
 			);
@@ -529,6 +557,7 @@
 				32CFC70724EBEEB300457B17 /* VGSCardScanCollector.framework */,
 				32CFC70F24EBEEB300457B17 /* VGSCardScanCollectorTests.xctest */,
 				326FFAF224F904430024A4F9 /* VGSCardIOCollector.framework */,
+				4476777B25C143FB001C3CB2 /* VGSCollectResources.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -609,6 +638,7 @@
 				FD05F9372316CE5A000EAF52 /* VGSCollectSDK */,
 				326FFAFA24F908AB0024A4F9 /* VGSCardIOCollector */,
 				32CFC71E24EBEF0E00457B17 /* VGSCardScanCollector */,
+				4476778925C14460001C3CB2 /* VGSCollectResources */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -688,6 +718,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4476777625C143FB001C3CB2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4476777F25C143FB001C3CB2 /* VGSCollectResources.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FD12B9AA2304619100B670DD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -756,6 +794,24 @@
 			productReference = 32CFC70F24EBEEB300457B17 /* VGSCardScanCollectorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4476777A25C143FB001C3CB2 /* VGSCollectResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4476778225C143FB001C3CB2 /* Build configuration list for PBXNativeTarget "VGSCollectResources" */;
+			buildPhases = (
+				4476777625C143FB001C3CB2 /* Headers */,
+				4476777725C143FB001C3CB2 /* Sources */,
+				4476777825C143FB001C3CB2 /* Frameworks */,
+				4476777925C143FB001C3CB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VGSCollectResources;
+			productName = VGSCollectResources;
+			productReference = 4476777B25C143FB001C3CB2 /* VGSCollectResources.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		FD12B9AE2304619100B670DD /* VGSCollectSDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD12B9C32304619200B670DD /* Build configuration list for PBXNativeTarget "VGSCollectSDK" */;
@@ -814,6 +870,9 @@
 					32CFC70E24EBEEB300457B17 = {
 						CreatedOnToolsVersion = 11.6;
 					};
+					4476777A25C143FB001C3CB2 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					FD12B9AE2304619100B670DD = {
 						CreatedOnToolsVersion = 10.3;
 						LastSwiftMigration = 1130;
@@ -842,6 +901,7 @@
 				32CFC70624EBEEB300457B17 /* VGSCardScanCollector */,
 				32CFC70E24EBEEB300457B17 /* VGSCardScanCollectorTests */,
 				326FFAF124F904430024A4F9 /* VGSCardIOCollector */,
+				4476777A25C143FB001C3CB2 /* VGSCollectResources */,
 			);
 		};
 /* End PBXProject section */
@@ -868,11 +928,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4476777925C143FB001C3CB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4476778C25C14460001C3CB2 /* CardIcon.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FD12B9AD2304619100B670DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				447A81122589438000BC77C7 /* CardIcon.xcassets in Resources */,
 				32EFFD002510D97B007F4DA2 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -991,6 +1058,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				32CFC71524EBEEB300457B17 /* VGSCardScanCollectorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4476777725C143FB001C3CB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1275,6 +1349,58 @@
 			};
 			name = Release;
 		};
+		4476778025C143FB001C3CB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4445Y664U5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = VGSCollectResources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = VGS.VGSCollectResources;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4476778125C143FB001C3CB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4445Y664U5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = VGSCollectResources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = VGS.VGSCollectResources;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FD12B9C12304619200B670DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1538,6 +1664,15 @@
 			buildConfigurations = (
 				32CFC71A24EBEEB300457B17 /* Debug */,
 				32CFC71B24EBEEB300457B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4476778225C143FB001C3CB2 /* Build configuration list for PBXNativeTarget "VGSCollectResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4476778025C143FB001C3CB2 /* Debug */,
+				4476778125C143FB001C3CB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
