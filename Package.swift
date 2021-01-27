@@ -40,6 +40,7 @@ let package = Package(
 				dependencies: [
 					.target(name: "VGSCollectSDK")
 				]),
+			
 			.target(
 					name: "VGSCollectResources"),
 			.testTarget(

@@ -27,6 +27,11 @@ Pod::Spec.new do |spec|
       'CardIcon' => ['Sources/VGSCollectSDK/Resources/*']
     }
   end
+
+  spec.subspec 'Light' do |light|
+        core.source_files = "Sources/VGSCollectSDK", "Sources/VGSCollectSDK/**/*.{swift}", "Sources/VGSCollectSDK/**/*.{h, m}"
+    core.resource_bundles = {}
+  end
   
   spec.subspec 'CardScan' do |cardscan|
     cardscan.source_files  = "Sources/VGSCardScanCollector", "Sources/VGSCardScanCollector/**/*.{swift}"
