@@ -20,7 +20,7 @@ Pod::Spec.new do |spec|
   
   spec.default_subspec = 'Core'
 
-    spec.subspec 'VGSCollectResources' do |resources|
+    spec.subspec 'Resources' do |resources|
 		resources.source_files = "Sources/VGSCollectResources", "Sources/VGSCollectResources/**/*.{swift}", "Sources/VGSCollectResources/**/*.{h, m}"
 		resources.resource_bundles = {
 		'CardIcon' => ['Sources/VGSCollectResources/Resources/*']
@@ -30,7 +30,7 @@ Pod::Spec.new do |spec|
   spec.subspec 'Core' do |core|
   #set as default podspec to prevent from downloading additional modules
     core.source_files = "Sources/VGSCollectSDK", "Sources/VGSCollectSDK/**/*.{swift}", "Sources/VGSCollectSDK/**/*.{h, m}"
-		core.dependency "VGSCollectResources"
+		core.dependency "VGSCollectSDK/Resources"
   end
 
   spec.subspec 'Light' do |light|
