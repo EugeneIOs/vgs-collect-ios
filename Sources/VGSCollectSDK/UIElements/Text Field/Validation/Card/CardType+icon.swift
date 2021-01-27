@@ -11,6 +11,11 @@ import Foundation
 import UIKit
 #endif
 
+
+#if canImport(VGSCollectResources)
+import VGSCollectResources
+#endif
+
 extension VGSPaymentCards.CardBrand {
     
     var brandIcon: UIImage? {

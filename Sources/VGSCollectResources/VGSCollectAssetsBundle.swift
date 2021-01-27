@@ -6,10 +6,10 @@
 import Foundation
 
 public final class VGSCollectAssetsBundle {
-		static var main = VGSCollectAssetsBundle()
-		var iconBundle: Bundle?
+	public static var main = VGSCollectAssetsBundle()
+	public var iconBundle: Bundle?
 
-		init() {
+	public init() {
 			// Identify bundle for SPM.
 
 			#if SWIFT_PACKAGE
