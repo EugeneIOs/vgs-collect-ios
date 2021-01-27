@@ -71,9 +71,7 @@ internal class AssetsBundle {
     init() {
 			// Identify bundle for SPM.
 
-			#if canImport(VGSCollectResources)
-				iconBundle = VGSCollectAssetsBundle.main.iconBundle
-			#endif
+			iconBundle = VGSCollectAssetsBundle.main.iconBundle
 
 //			// Return if bundle is found.
 //			guard iconBundle == nil else {
