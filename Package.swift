@@ -39,8 +39,9 @@ let package = Package(
 				name: "VGSCollectSDK-Light",
 				dependencies: [
 					.target(name: "VGSCollectSDK")
+				], exclude: [
+					"Sources/VGSCollectResources/Resources"
 				]),
-			
 			.target(
 					name: "VGSCollectResources"),
 			.testTarget(
