@@ -29,8 +29,9 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'Light' do |light|
-        core.source_files = "Sources/VGSCollectSDK", "Sources/VGSCollectSDK/**/*.{swift}", "Sources/VGSCollectSDK/**/*.{h, m}"
-    core.resource_bundles = {}
+		light.source_files = "Sources/VGSCollectSDK", "Sources/VGSCollectSDK/**/*.{swift}", "Sources/VGSCollectSDK/**/*.{h, m}"
+    light.resource_bundles = {
+    }
   end
   
   spec.subspec 'CardScan' do |cardscan|
