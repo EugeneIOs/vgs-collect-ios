@@ -27,10 +27,11 @@ let package = Package(
         .target(
             name: "VGSCollectSDK",
   					exclude: [
-							"VGSCollectSDK.h"
+							"VGSCollectSDK.h",
 	 				]),
 			.target(
 					name: "VGSCollectSDK-Light",
+				  path: "Sources/VGSCollectSDK",
 					exclude: [
 						"VGSCollectSDK.h",
 						"Resources"
