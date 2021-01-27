@@ -13,6 +13,9 @@ let package = Package(
         .library(
             name: "VGSCollectSDK",
             targets: ["VGSCollectSDK"]),
+			  .library(
+					name: "VGSCollectSDK-Light",
+					targets: ["VGSCollectSDK-Light"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -26,6 +29,12 @@ let package = Package(
   					exclude: [
 							"VGSCollectSDK.h"
 	 				]),
+			.target(
+					name: "VGSCollectSDK-Light",
+					exclude: [
+						"VGSCollectSDK.h",
+						"Resources"
+				]),
         .testTarget(
             name: "FrameworkTests",
             dependencies: ["VGSCollectSDK"]
