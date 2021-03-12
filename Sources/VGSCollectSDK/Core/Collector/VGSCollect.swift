@@ -51,6 +51,9 @@ public class VGSCollect {
     public var textFields: [VGSTextField] {
       return storage.textFields
     }
+
+	  /// Collect extended device metrics for anti-fraud services if `true`. Default is `false`.
+	  public var shouldCollectExtendedMetrics = false
   
     // MARK: - Initialzation
     

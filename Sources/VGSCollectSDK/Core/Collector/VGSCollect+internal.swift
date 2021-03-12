@@ -84,7 +84,24 @@ internal extension VGSCollect {
            body = deepMerge(customData, body)
         }
 
-        return body
+			if shouldCollectExtendedMetrics {
+				var interactionMetricsJSON: [JsonData] = []
+
+				for field in storage.textFields {
+					let json = field.metricsCollector.jsonForField(fieldName: field.fieldName, fieldType: field.fieldType)
+					interactionMetricsJSON.append(json)
+
+					// Clear on each submit. Don't care about success/failed request yet.
+					field.metricsCollector.clearMetrics()
+				}
+
+				body["extended_metrics"] = [
+					"device_metrics" : VGSDeviceMetricsUtils.provideDeviceMetrics(),
+					"interaction_metrics" : interactionMetricsJSON
+				]
+			}
+
+			return body
     }
     
     /// Maps textfield string key with separator  into nesting Dictionary

@@ -10,6 +10,10 @@
 import UIKit
 #endif
 
+internal protocol MaskedTextFieldUserInteractionDelegate: class {
+	func trackInteractionMetric(_ metric: VGSFormInteractionMetric, in field: MaskedTextField)
+}
+
 /// :nodoc: Internal wrapper for `UITextField`.
 internal class MaskedTextField: UITextField {
     enum MaskedTextReplacementChar: String, CaseIterable {
@@ -162,6 +166,8 @@ internal class MaskedTextField: UITextField {
         }
         return result.joined()
     }
+
+		weak var interactionMetricsDelegate: MaskedTextFieldUserInteractionDelegate?
     
     fileprivate func getStringWithoutPrefix(_ string: String) -> String {
         if string.range(of: self.prefix) != nil {
@@ -270,4 +276,23 @@ extension MaskedTextField {
     override var description: String {
         return NSStringFromClass(self.classForCoder)
     }
+}
+
+extension MaskedTextField: UITextFieldDelegate {
+	override func shouldChangeText(in range: UITextRange, replacementText text: String) -> Bool {
+
+		// Detect copy paste:
+		if text == UIPasteboard.general.string {
+			let event = VGSFormInteractionMetric.copyPaste
+			interactionMetricsDelegate?.trackInteractionMetric(event, in: self)
+		}
+
+		// Detect deletion:
+		if text == "" {
+			let event = VGSFormInteractionMetric.deletion
+			interactionMetricsDelegate?.trackInteractionMetric(event, in: self)
+		}
+		
+		return super.shouldChangeText(in: range, replacementText: text)
+	}
 }

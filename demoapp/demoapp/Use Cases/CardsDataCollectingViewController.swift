@@ -34,7 +34,8 @@ class CardsDataCollectingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+				vgsCollect.shouldCollectExtendedMetrics = true
         setupUI()
         setupElementsConfiguration()
         

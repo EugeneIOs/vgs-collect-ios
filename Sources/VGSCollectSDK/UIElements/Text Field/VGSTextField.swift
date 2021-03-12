@@ -12,7 +12,7 @@ import UIKit
 
 /// An object that displays an editable text area in user interface.
 public class VGSTextField: UIView {
-    
+
     private(set) weak var vgsCollector: VGSCollect?
     internal var textField = MaskedTextField(frame: .zero)
     internal var focusStatus: Bool = false
@@ -25,6 +25,7 @@ public class VGSTextField: UIView {
     internal var horizontalConstraints = [NSLayoutConstraint]()
     internal var verticalConstraint = [NSLayoutConstraint]()
     internal var validationRules = VGSValidationRuleSet()
+	  internal let metricsCollector = VGSFieldInteractionMetricsCollector()
 
     // MARK: - UI Attributes
     
@@ -227,6 +228,9 @@ internal extension VGSTextField {
         buildTextFieldUI()
         // add otextfield observers and delegates
         addTextFieldObservers()
+
+			  textField.delegate = textField
+				textField.interactionMetricsDelegate = self
     }
   
     @objc
@@ -305,6 +309,9 @@ internal extension VGSTextField {
         // change status
         textField.becomeFirstResponder()
         textFieldValueChanged()
+
+			  // Track on focus.
+			  trackMetric(.onFocus)
     }
   
   /// This will update format pattern and notify about the change
@@ -319,6 +326,16 @@ internal extension VGSTextField {
     textFieldValueChanged()
     delegate?.vgsTextFieldDidChange?(self)
   }
+
+	func trackMetric(_ metric: VGSFormInteractionMetric) {
+		guard vgsCollector?.shouldCollectExtendedMetrics == true else {return}
+
+		metricsCollector.trackMetric(metric)
+	}
+
+	func clearCollectedMetrics() {
+		metricsCollector.clearMetrics()
+	}
 }
 
 // MARK: - Main style for text field
@@ -329,4 +346,12 @@ extension UIView {
         layer.borderWidth = 1
         layer.cornerRadius = 4
     }
+}
+
+// MARK: - MaskedTextFieldUserInteractionDelegate
+
+extension VGSTextField: MaskedTextFieldUserInteractionDelegate {
+	func trackInteractionMetric(_ metric: VGSFormInteractionMetric, in field: MaskedTextField) {
+		trackMetric(metric)
+	}
 }
