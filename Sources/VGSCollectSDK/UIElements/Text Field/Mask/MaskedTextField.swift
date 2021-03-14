@@ -279,20 +279,20 @@ extension MaskedTextField {
 }
 
 extension MaskedTextField: UITextFieldDelegate {
-	override func shouldChangeText(in range: UITextRange, replacementText text: String) -> Bool {
+	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 
-		// Detect copy paste:
-		if text == UIPasteboard.general.string {
+	 // Detect copy paste:
+   if string == UIPasteboard.general.string {
 			let event = VGSFormInteractionMetric.copyPaste
 			interactionMetricsDelegate?.trackInteractionMetric(event, in: self)
 		}
 
 		// Detect deletion:
-		if text == "" {
+		if string == "" {
 			let event = VGSFormInteractionMetric.deletion
 			interactionMetricsDelegate?.trackInteractionMetric(event, in: self)
 		}
-		
-		return super.shouldChangeText(in: range, replacementText: text)
+
+		return true
 	}
 }

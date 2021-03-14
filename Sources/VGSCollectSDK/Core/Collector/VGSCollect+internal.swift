@@ -91,7 +91,7 @@ internal extension VGSCollect {
 					let json = field.metricsCollector.jsonForField(fieldName: field.fieldName, fieldType: field.fieldType)
 					interactionMetricsJSON.append(json)
 
-					// Clear on each submit. Don't care about success/failed request yet.
+					// Clear on each submit. Don't handle success/failed request state yet.
 					field.metricsCollector.clearMetrics()
 				}
 
