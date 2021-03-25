@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "CardIOSDK",
+        "repositoryURL": "https://github.com/EugeneIOs/CardIOSDK-iOS.git",
+        "state": {
+          "branch": "feature/CardIO-package-test",
+          "revision": "155e00cd0cfc1d8f346e93e90bbd900724b54a62",
+          "version": null
+        }
+      },
+      {
         "package": "CardScan",
         "repositoryURL": "https://github.com/getbouncer/cardscan-ios.git",
         "state": {
