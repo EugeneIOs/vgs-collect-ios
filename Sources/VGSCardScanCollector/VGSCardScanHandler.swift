@@ -90,9 +90,13 @@ extension VGSCardScanHandler: ScanDelegate {
     }
 
 		// We cannot check Bouncer version. CVV has been added later so we rely on Obj-C stuff.
-		if let cvv = creditCard.value(forKey: "cvv") as? String, !cvv.isEmpty, let textfield = cardScanDelegate.textFieldForScannedData(type: .cvv)
-		{
+		if let cvv = creditCard.value(forKey: "cvv") as? String {
+			print(cvv)
+			if !cvv.isEmpty, let textfield = cardScanDelegate.textFieldForScannedData(type: .cvv) {
 				textfield.setText(cvv)
+			}
+		} else {
+			print("Card Scanner version doesn't have CVV. Old version")
 		}
 
     if let month = Int(creditCard.expiryMonth ?? ""), 1...12 ~= month, let year = Int(creditCard.expiryYear ?? ""), year >= VGSCalendarUtils.currentYearShort {
