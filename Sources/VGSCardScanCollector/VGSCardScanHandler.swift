@@ -74,7 +74,9 @@ extension VGSCardScanHandler: ScanDelegate {
     guard let cardScanDelegate = delegate else {
       return
     }
-    
+
+		print("Scanned Credit card model: \(creditCard)")
+
     if !creditCard.number.isEmpty, let textfield = cardScanDelegate.textFieldForScannedData(type: .cardNumber) {
     
       if let form = textfield.configuration?.vgsCollector {
