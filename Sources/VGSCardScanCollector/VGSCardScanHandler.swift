@@ -89,6 +89,15 @@ extension VGSCardScanHandler: ScanDelegate {
       textfield.setText(name)
     }
 
+		for property in Mirror(reflecting: creditCard).children {
+				print("name: \(property.label) type: \(type(of: property.value))")
+			if property.label == "cvv" {
+				if let cvvValue = property.value as? String {
+					print("cvvValue: \(cvvValue)")
+				}
+			}
+		}
+
 		// We cannot check Bouncer version. CVV has been added later so we rely on Obj-C stuff.
 		if let cvv = creditCard.value(forKey: "cvv") as? String {
 			print(cvv)
@@ -96,7 +105,7 @@ extension VGSCardScanHandler: ScanDelegate {
 				textfield.setText(cvv)
 			}
 		} else {
-			print("Card Scanner version doesn't have CVV. Old version")
+			print("Value for Key test! Card Scanner version doesn't have CVV. Old version")
 		}
 
     if let month = Int(creditCard.expiryMonth ?? ""), 1...12 ~= month, let year = Int(creditCard.expiryYear ?? ""), year >= VGSCalendarUtils.currentYearShort {
