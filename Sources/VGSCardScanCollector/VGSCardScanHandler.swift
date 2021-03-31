@@ -91,7 +91,9 @@ extension VGSCardScanHandler: ScanDelegate {
 
 		for property in Mirror(reflecting: creditCard).children {
 				print("name: \(property.label) type: \(type(of: property.value))")
+			print("value: \(property.value)")
 			if property.label == "cvv" {
+				print("cvv: \(property.value)")
 				if let cvvValue = property.value as? String {
 					print("cvvValue: \(cvvValue)")
 				}
