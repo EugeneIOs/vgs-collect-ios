@@ -20,6 +20,9 @@ public enum CradScanDataType: Int {
     
     /// Credit Card Number. Digits string.
     case cardNumber
+
+		/// Credit Card CVV. Digits string.
+		case cvv
     
     /// Credit Card Expiration Date. String in format "01/21".
     case expirationDate
