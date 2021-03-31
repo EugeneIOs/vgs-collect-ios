@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -43,7 +43,6 @@
 		324B5E9D24A64A600036867E /* VGSValidationRulePaymentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324B5E9C24A64A600036867E /* VGSValidationRulePaymentCard.swift */; };
 		324CDEE323FB12E200653890 /* FilePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324CDEE123FB12E200653890 /* FilePickerTests.swift */; };
 		325AB9CB2420C5410024134B /* VGSFilePickerControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325AB9CA2420C5410024134B /* VGSFilePickerControllerDelegate.swift */; };
-		3260697D24F7F3F80091F0DD /* CardScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32CFC72424EBF3B500457B17 /* CardScan.framework */; };
 		3262B2FB23F5A32400D4A73D /* VGSFileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262B2F723F5A32400D4A73D /* VGSFileSource.swift */; };
 		3262B2FD23F5A36E00D4A73D /* VGSImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262B2FC23F5A36E00D4A73D /* VGSImagePicker.swift */; };
 		3262B2FF23F5A3B300D4A73D /* VGSDocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3262B2FE23F5A3B300D4A73D /* VGSDocumentPicker.swift */; };
@@ -119,6 +118,7 @@
 		449C8A4025F2521900BE009F /* VGSFieldNameSubscriptType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449C8A3F25F2521800BE009F /* VGSFieldNameSubscriptType.swift */; };
 		44A67DDB25DCE3D100906957 /* VGSAPIClientSatelliteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A67DDA25DCE3D100906957 /* VGSAPIClientSatelliteTests.swift */; };
 		44C23A7925F7B7EF000EA556 /* VGSFieldNameToJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C23A7825F7B7EF000EA556 /* VGSFieldNameToJSONTests.swift */; };
+		44D29027261470CE00EE0046 /* CardScan in Frameworks */ = {isa = PBXBuildFile; productRef = 44D29026261470CE00EE0046 /* CardScan */; };
 		44F8F51C25DBD1950052647A /* VGSCollectSatelliteUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F8F51B25DBD1950052647A /* VGSCollectSatelliteUtils.swift */; };
 		44F8F52F25DBE8770052647A /* VGSCollectSatelliteUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F8F52325DBE7E40052647A /* VGSCollectSatelliteUtilsTests.swift */; };
 		FD05F9472316CE5A000EAF52 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05F9392316CE5A000EAF52 /* Storage.swift */; };
@@ -242,7 +242,6 @@
 		32CFC71624EBEEB300457B17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32CFC71F24EBEFF700457B17 /* VGSCardScanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGSCardScanController.swift; sourceTree = "<group>"; };
 		32CFC72124EBF28B00457B17 /* VGSCardScanHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGSCardScanHandler.swift; sourceTree = "<group>"; };
-		32CFC72424EBF3B500457B17 /* CardScan.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CardScan.framework; path = Carthage/Build/iOS/CardScan.framework; sourceTree = "<group>"; };
 		32E4989B23FAEF8300863E61 /* VGSFileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGSFileInfo.swift; sourceTree = "<group>"; };
 		32EFFCFF2510D97B007F4DA2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		32F23A6C24B60E1100E389F7 /* VGSValidationRuleLengthMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGSValidationRuleLengthMatch.swift; sourceTree = "<group>"; };
@@ -336,7 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32CFC72D24EC029800457B17 /* VGSCollectSDK.framework in Frameworks */,
-				3260697D24F7F3F80091F0DD /* CardScan.framework in Frameworks */,
+				44D29027261470CE00EE0046 /* CardScan in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,7 +577,6 @@
 			isa = PBXGroup;
 			children = (
 				326FFB0524F90D920024A4F9 /* CardIO.framework */,
-				32CFC72424EBF3B500457B17 /* CardScan.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -984,7 +982,6 @@
 				32CFC70324EBEEB300457B17 /* Sources */,
 				32CFC70424EBEEB300457B17 /* Frameworks */,
 				32CFC70524EBEEB300457B17 /* Resources */,
-				32CFC72824EBF3BC00457B17 /* ShellScript */,
 				32C89471256C351B00DC5648 /* SwiftLint */,
 			);
 			buildRules = (
@@ -992,6 +989,9 @@
 			dependencies = (
 			);
 			name = VGSCardScanCollector;
+			packageProductDependencies = (
+				44D29026261470CE00EE0046 /* CardScan */,
+			);
 			productName = VGSCardScanCollector;
 			productReference = 32CFC70724EBEEB300457B17 /* VGSCardScanCollector.framework */;
 			productType = "com.apple.product-type.framework";
@@ -1091,6 +1091,9 @@
 				Base,
 			);
 			mainGroup = FD12B9A52304619100B670DD;
+			packageReferences = (
+				44D29025261470CE00EE0046 /* XCRemoteSwiftPackageReference "cardscan-ios" */,
+			);
 			productRefGroup = FD12B9B02304619100B670DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1206,25 +1209,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint lint --config \"${SRCROOT}/.swiftlint.yml\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		32CFC72824EBF3BC00457B17 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/CardScan.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CardScan.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1868,6 +1852,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		44D29025261470CE00EE0046 /* XCRemoteSwiftPackageReference "cardscan-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getbouncer/cardscan-ios.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44D29026261470CE00EE0046 /* CardScan */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44D29025261470CE00EE0046 /* XCRemoteSwiftPackageReference "cardscan-ios" */;
+			productName = CardScan;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FD12B9A62304619100B670DD /* Project object */;
 }
