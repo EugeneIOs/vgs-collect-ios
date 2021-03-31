@@ -100,6 +100,14 @@ extension VGSCardScanHandler: ScanDelegate {
 			}
 		}
 
+		if let cvv = creditCard.cvv {
+			print("FOUND NORMAL CVV!!!")
+			if !cvv.isEmpty, let textfield = cardScanDelegate.textFieldForScannedData(type: .cvv) {
+				print("SET CVV!!!")
+					textfield.setText(cvv)
+				}
+		}
+
 		// We cannot check Bouncer version. CVV has been added later so we rely on Obj-C stuff.
 		if let cvv = creditCard.value(forKey: "cvv") as? String {
 			print(cvv)
